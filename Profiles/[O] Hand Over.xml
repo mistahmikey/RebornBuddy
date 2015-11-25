@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Profile [
+<!ENTITY BagIds "Bag1,Bag2,Bag3,Bag4">
+]>
+<Profile>
+	<Name>[O] Hand Over</Name>
+	<KillRadius>100</KillRadius>
+	<Order>		
+		<HandoverHelper BagIds="&BagIds;" ItemIds="7619" ItemsPerHandover="2"/>
+	</Order>
+</Profile>
