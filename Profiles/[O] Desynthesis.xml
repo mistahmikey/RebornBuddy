@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Profile [
+<!ENTITY BagIds "Bag1,Bag2,Bag3,Bag4">
+]>
+<Profile>
+	<Name>[O] Desynthesis</Name>
+	<KillRadius>100</KillRadius>
+    <CodeChunks>
+		<CodeChunk Name="GSM">
+			<![CDATA[ ff14bot.Managers.ChatManager.SendChat("/gs change 1");
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="SHUTDOWN">
+			<![CDATA[ Core.Memory.Process.Kill();
+			]]>
+		</CodeChunk>
+	</CodeChunks>
+	<Order>
+	
+		<RunCode name="GSM"/>
+						
+		<WaitTimer waitTime="3"/>
+		
+		
+		<Desynth BagIds="&BagIds;" DesynthDelay="6000" DesynthTimeout="10"/>
+			
+		<!--RunCode name="SHUTDOWN"/-->
+
+	</Order>
+</Profile>
